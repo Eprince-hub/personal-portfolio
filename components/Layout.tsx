@@ -2,6 +2,9 @@ import { Box, Container, CssBaseline, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import Head from 'next/head';
 import React, { ReactNode } from 'react';
+import classes from '../utils/classes';
+import Footer from './Footer';
+import Header from './Header';
 
 type LayoutProps = {
   title: string;
@@ -29,7 +32,7 @@ const theme = createTheme({
       fontSize: '1.6rem',
       fontWeight: 400,
       margin: '1rem 0',
-      fontFamily: 'oswald',
+      fontFamily: 'Archivo Black',
       color: 'red',
     },
 
@@ -37,14 +40,21 @@ const theme = createTheme({
       fontSize: '1.4rem',
       fontWeight: 400,
       margin: '1rem 0',
-      fontFamily: 'oswald',
+      fontFamily: 'Merriweather',
     },
 
     h3: {
-      fontSize: '1.4rem',
+      fontSize: '1.6rem',
       fontWeight: 400,
       margin: '1rem 0',
-      fontFamily: 'oswald',
+      fontFamily: 'Playball',
+    },
+
+    h4: {
+      fontSize: '1.8rem',
+      fontWeight: 400,
+      margin: '1rem 0',
+      fontFamily: 'Archivo Black',
     },
   },
 
@@ -79,9 +89,13 @@ export default function Layout(props: LayoutProps) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
 
-        <Container component="main" maxWidth={false}>
+        <Header />
+
+        <Container component="main" sx={classes.main} maxWidth={false}>
           {props.children}
         </Container>
+
+        <Footer />
       </ThemeProvider>
     </Box>
   );

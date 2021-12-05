@@ -3,11 +3,27 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
 import createEmotionCache from '../utils/createEmotionCache';
 
+// was throwing an error when used normal so i do it like this,, => It worked!
+const fontLink =
+  'https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather&family=Playball&display=swap';
+
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{/* Have some meta data */}</Head>
+        <Head>
+          {/*   <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather&family=Playball&display=swap"
+            rel="stylesheet"
+          /> */}
+
+          <link
+            rel="stylesheet"
+            href={fontLink}
+            integrity="sha384-K+MFliLRYXEa1Xq0q2yrGhFSn+a+rYjWYGPJLRbIDlaLlE45xfgg8uhd/frO8QJR"
+            crossOrigin="anonymous"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
