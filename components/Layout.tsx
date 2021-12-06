@@ -56,6 +56,12 @@ const theme = createTheme({
       margin: '1rem 0',
       fontFamily: 'Archivo Black',
     },
+
+    h5: {
+      fontSize: '1.6rem',
+      fontWeight: 400,
+      fontFamily: 'Padauk',
+    },
   },
 
   palette: {

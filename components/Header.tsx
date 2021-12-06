@@ -1,8 +1,11 @@
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import { Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import React, { useEffect, useState } from 'react';
+import styles from '../styles/Header.module.css';
+import classes from '../utils/classes';
 
 export default function Header() {
   // change navbar background color on scroll
@@ -27,8 +30,10 @@ export default function Header() {
   }, [navbar]);
 
   return (
-    <header>
-      <nav /* className={styles.navMenu} */>
+    <header
+      className={navbar ? styles.headerStyleOnScroll : styles.headerStyle}
+    >
+      <nav className={styles.navMenu}>
         <Box>
           <div /* className={styles.logo} */>
             {navbar ? (
@@ -49,38 +54,42 @@ export default function Header() {
           </div>
         </Box>
 
-        <Box /* sx={classes.navbarButtons} */>
+        <Box sx={classes.navbarButtons}>
           <NextLink href="/" passHref>
             <Link>
-              <Typography variant="h2" component="h2">
-                HOME
+              <Typography variant="h5" component="h5">
+                Home
               </Typography>
             </Link>
           </NextLink>
 
           <NextLink href="/about" passHref>
             <Link>
-              <Typography variant="h2" component="h2">
-                ABOUT ME
+              <Typography variant="h5" component="h5">
+                About
               </Typography>
             </Link>
           </NextLink>
 
           <NextLink href="/contact" passHref>
             <Link>
-              <Typography variant="h2" component="h2">
-                CONTACT ME
+              <Typography variant="h5" component="h5">
+                Contact
               </Typography>
             </Link>
           </NextLink>
 
           <NextLink href="/blog" passHref>
             <Link>
-              <Typography variant="h2" component="h2">
-                BLOG
+              <Typography variant="h5" component="h5">
+                Blog
               </Typography>
             </Link>
           </NextLink>
+        </Box>
+
+        <Box>
+          <FacebookRoundedIcon />
         </Box>
       </nav>
     </header>

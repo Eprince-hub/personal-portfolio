@@ -5,7 +5,7 @@ import createEmotionCache from '../utils/createEmotionCache';
 
 // was throwing an error when used normal so i do it like this,, => It worked!
 const fontLink =
-  'https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather&family=Playball&display=swap';
+  'https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather&family=Padauk:wght@700&family=Playball&display=swap';
 
 export default class MyDocument extends Document {
   render() {
@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
           <link
             rel="stylesheet"
             href={fontLink}
-            integrity="sha384-K+MFliLRYXEa1Xq0q2yrGhFSn+a+rYjWYGPJLRbIDlaLlE45xfgg8uhd/frO8QJR"
+            integrity="sha512-sL4jQDmCau741t51gM6fJA2Ic7hdadfjL5WG+PC1QkTQiRUQl2K8K571j4JOj0leIAYyvCoyc9YCdGQf10ObNw=="
             crossOrigin="anonymous"
           />
         </Head>
