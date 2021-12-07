@@ -108,9 +108,204 @@
   margin-left: 0.5rem;
 }
 
+/* .fullHeight {
+  height: 100vh;
+}
+ */
+
+/* My styles started here */
+
+/* Home page styles */
+.homePageStyle {
+  background: #171a2b;
+  color: white;
+}
+
+.homePageHeroStyle {
+  margin: 0 auto;
+  width: 80%;
+  height: 150vh;
+  background-image: url('../public/images/backgrounds/home-page-hero-bg.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  border-bottom-left-radius: 6rem;
+  border-bottom-right-radius: 4rem;
+  display: flex;
+}
+
+.heroTextContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.homePageHeader {
+  position: absolute;
+  font-size: 4rem;
+  font-family: 'Archivo Black';
+  left: 0;
+  top: 60px;
+}
+
+.heroImageContainer {
+  background: #0f1223;
+  width: 100%;
+  height: 80%;
+  margin-right: -10.7rem;
+  border-bottom-left-radius: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.profileImage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.blogPageStyle {
+  background: red;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+/* Home page hero page typing text animation */
+
+/* .wrapper {
+  display: flex;
+}
+.wrapper .staticText {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamicTexts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamicTexts li {
+  list-style: none;
+  color: #fc6d6d;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+.dynamicTexts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamicTexts li span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #343f4f;
+  border-left: 2px solid #fc6d6d;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+} */
+
+/* Second text animation style */
+
+.animatedTextContainer {
+  width: 100%;
+  height: 60%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.animatedTextContainer h1 {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  min-width: 200%;
+  font-size: 4rem;
+  font-family: 'Archivo Black';
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  left: 0;
+  top: 60px;
+}
+
+.type {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 2rem;
+}
+
+.type > span {
+  color: #627fff;
+  display: -ms-grid;
+  display: grid;
+  overflow: hidden;
+  height: 1.2em;
+}
+
+.type span span {
+  width: 0%;
+  max-width: max-content;
+  overflow: hidden;
+  height: inherit;
+  word-break: break-all;
+  animation: c 0.5s infinite steps(1), t 2s linear infinite alternate,
+    m 16s steps(4) infinite;
+}
+
+.type span span:before {
+  content: ' ';
+  display: inline-block;
+}
+
+@keyframes t {
+  90%,
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes c {
+  0%,
+  100% {
+    box-shadow: 5px 0 0 #0000;
+  }
+  50% {
+    box-shadow: 5px 0 0 white;
+  }
+}
+
+@keyframes m {
+  100% {
+    transform: translateY(-400%);
   }
 }

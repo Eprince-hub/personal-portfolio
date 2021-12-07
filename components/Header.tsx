@@ -57,33 +57,25 @@ export default function Header() {
         <Box sx={classes.navbarButtons}>
           <NextLink href="/" passHref>
             <Link>
-              <Typography variant="h5" component="h5">
-                Home
-              </Typography>
+              <Typography component="p">Home</Typography>
             </Link>
           </NextLink>
 
           <NextLink href="/about" passHref>
             <Link>
-              <Typography variant="h5" component="h5">
-                About
-              </Typography>
+              <Typography component="p">About</Typography>
             </Link>
           </NextLink>
 
           <NextLink href="/contact" passHref>
             <Link>
-              <Typography variant="h5" component="h5">
-                Contact
-              </Typography>
+              <Typography component="p">Contact</Typography>
             </Link>
           </NextLink>
 
           <NextLink href="/blog" passHref>
             <Link>
-              <Typography variant="h5" component="h5">
-                Blog
-              </Typography>
+              <Typography component="p">Blog</Typography>
             </Link>
           </NextLink>
         </Box>

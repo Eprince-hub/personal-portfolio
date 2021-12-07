@@ -1,5 +1,7 @@
 import { Box, Container, CssBaseline, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
+/* import { SxProps } from '@mui/system';
+ */
 import Head from 'next/head';
 import React, { ReactNode } from 'react';
 import classes from '../utils/classes';
@@ -9,6 +11,8 @@ import Header from './Header';
 type LayoutProps = {
   title: string;
   children: ReactNode;
+  customPageClassName?: string;
+  /* sx?: SxProps; */
 };
 
 /* declare module '@mui/material/styles' {
@@ -74,14 +78,16 @@ const theme = createTheme({
   },
 });
 
-export default function Layout(props: LayoutProps) {
+export default function Layout({
+  /* sx= [],  */ customPageClassName,
+  title,
+  children,
+}: LayoutProps) {
   return (
-    <Box>
+    <Box className={customPageClassName}>
       <Head>
         <title>
-          {props.title
-            ? `${props.title} - Personal portfolio`
-            : 'Personal Portfolio'}
+          {title ? `${title} - Personal portfolio` : 'Personal Portfolio'}
         </title>
 
         <meta
@@ -98,7 +104,7 @@ export default function Layout(props: LayoutProps) {
         <Header />
 
         <Container component="main" sx={classes.main} maxWidth={false}>
-          {props.children}
+          {children}
         </Container>
 
         <Footer />
